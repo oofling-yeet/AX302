@@ -52,52 +52,52 @@ function create(){
 	player.body.gravity.y = 300;
 	player.body.collideWorldBounds = true;
 
-	baddie = game.add.sprite(32,400,'dude');
-	baddie.animations.add('left',[0,1],10,true);
-	baddie.animations.add('right',[2,3],10,true);
-	game.physics.arcade.endable(baddie);
-	baddie.body.bounce.y = 0.2;
-	baddie.body.gravity.y = 300;
-	baddie.body.collideWorldBounds = true;
+	// baddie = game.add.sprite(32,400,'dude');
+	// baddie.animations.add('left',[0,1],10,true);
+	// baddie.animations.add('right',[2,3],10,true);
+	// game.physics.arcade.endable(baddie);
+	// baddie.body.bounce.y = 0.2;
+	// baddie.body.gravity.y = 300;
+	// baddie.body.collideWorldBounds = true;
 
-	stars = game.add.physicsGroup();
-	stars.enableBody = true;
-	for(var i = 0; < 12; i++){
-		var star = stars.create(i* 70,0,'star');
-		star.body.gravity.y = 200;
-		star.body.bounce.y = 0.7 + Math.random()*0.2;
-	}
+	// stars = game.add.physicsGroup();
+	// stars.enableBody = true;
+	// for(var i = 0; < 12; i++){
+	// 	var star = stars.create(i* 70,0,'star');
+	// 	star.body.gravity.y = 200;
+	// 	star.body.bounce.y = 0.7 + Math.random()*0.2;
+	// }
 
-	cursors = game.input.keyboard.createCursorKeys();
+	// cursors = game.input.keyboard.createCursorKeys();
 
 
 
 }
 
 function update(){
-	game.physics.arcade.collide(player,platforms);
-	game.physics.arcade.collide(stars,platforms);
-	game.physics.arcade.collide(enemy1,platforms);
+	// game.physics.arcade.collide(player,platforms);
+	// game.physics.arcade.collide(stars,platforms);
+	// game.physics.arcade.collide(enemy1,platforms);
 
-	player.body.velocity.x = 0;
+	// player.body.velocity.x = 0;
 
-	if (cursors.left.isDown){
-		player.body.velocity.x = -150;
-		player.animations.play('left');
-	}
+	// if (cursors.left.isDown){
+	// 	player.body.velocity.x = -150;
+	// 	player.animations.play('left');
+	// }
 
-	else if (cursor.right.isDown){
-		player.body.velocity.x = 150;
-		player.animations.play('right');
-	}
+	// else if (cursor.right.isDown){
+	// 	player.body.velocity.x = 150;
+	// 	player.animations.play('right');
+	// }
 
-	else {
-		player.animations.stop();
-		player.frame = 4;
-	}
+	// else {
+	// 	player.animations.stop();
+	// 	player.frame = 4;
+	// }
 
-	if (cursors.up.isDown && player.body.touching.down){
-		player.body.velocity.y = -300;
-	}
+	// if (cursors.up.isDown && player.body.touching.down){
+	// 	player.body.velocity.y = -300;
+	// }
 
 }
